@@ -4,7 +4,12 @@
   "description": "Web frontend for the yatzy module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard && ava",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i"
   },
   "repository": {
     "type": "git",
@@ -16,5 +21,20 @@
   "bugs": {
     "url": "https://github.com/zrrrzzt/yatzy-web/issues"
   },
-  "homepage": "https://github.com/zrrrzzt/yatzy-web#readme"
+  "homepage": "https://github.com/zrrrzzt/yatzy-web#readme",
+  "dependencies": {
+    "next": "9.5.1",
+    "postcss-preset-env": "6.7.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "tailwindcss": "1.6.2",
+    "yatzy": "1.1.2"
+  },
+  "devDependencies": {
+    "ava": "3.11.1",
+    "standard": "14.3.4"
+  },
+  "engines": {
+    "node": ">=12.18.3"
+  }
 }
