@@ -24,7 +24,7 @@ const HomePage = () => {
         <div>Plays the game... so you don't have to</div>
         <AddPlayerForm addPlayer={addPlayer} />
         {players.map((player, index) => <Player player={player} key={index} />)}
-        <button onClick={playGame}>Play game</button>
+        <button onClick={playGame} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4'>Play game</button>
         { results && <ScoreCard results={results} />}
       </div>
     </>
