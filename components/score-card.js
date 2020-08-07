@@ -22,7 +22,7 @@ const scoreCard = props => {
   const { results } = props
   return (
     <div>
-      <table class="table-auto mb-4">
+      <table class="table-auto mt-2 mb-4">
         { results.map((row, index) => index === 0 ? <><Header {...row} /><Row {...row} /></> : <Row {...row} />) }
       </table>
     </div>
