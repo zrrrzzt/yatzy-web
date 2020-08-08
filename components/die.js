@@ -1,10 +1,8 @@
-import Dice from "./dice"
-
 const Die = props => {
   const { value } = props
-  return  (
+  return (
     <div>
-      { value }
+      {value}
     </div>
   )
 }

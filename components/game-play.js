@@ -26,7 +26,7 @@ const GamePlay = props => {
 
   return (
     <>
-      { nowPlaying && <GameTable name={nowPlaying} rolls={rolls} round={round} /> }
+      {nowPlaying && <GameTable name={nowPlaying} rolls={rolls} round={round} />}
     </>
   )
 }
