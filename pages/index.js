@@ -3,10 +3,13 @@ import yatzy from 'yatzy'
 import AddPlayerForm from '../components/add-player-form'
 import Player from '../components/player'
 import ScoreCard from '../components/score-card'
+import GamePlay from '../components/game-play'
 
 const HomePage = () => {
   const [players, setPlayers] = useState([])
   const [results, setResults] = useState()
+  const [gamePlay, setGamePlay] = useState()
+
   const addPlayer = player => {
     setPlayers(players => [...players, player])
   }
@@ -16,6 +19,13 @@ const HomePage = () => {
     Game.randomizePlayersOrder()
     Game.play()
     setResults(Game.generateScoreCard())
+  }
+  const playGameSlow = () => {
+    const Game = yatzy()
+    players.map(Game.addPlayer)
+    Game.randomizePlayersOrder()
+    Game.play()
+    setGamePlay(Game.generateGamePlay())
   }
   return (
     <>
@@ -27,7 +37,11 @@ const HomePage = () => {
           {players.length > 0 && <h2 className='text-2xl font-mono'>Players</h2>}
           {players.map((player, index) => <Player player={player} key={index} />)}
         </div>
-        <button onClick={playGame} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4'>Play game</button>
+        <div>
+          <button onClick={playGame} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 mr-2'>Play game quick</button>
+          <button onClick={playGameSlow} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4'>Play game slow</button>
+        </div>
+        {gamePlay && <GamePlay gameplay={gamePlay} />}
         {results && <ScoreCard results={results} />}
       </div>
     </>
