@@ -32,6 +32,7 @@ const HomePage = () => {
     setGamePlay(Game.generateGamePlay())
     const updateResult = () => {
       setResults(Game.generateScoreCard())
+      setGamePlay(false)
     }
     setTimeout(updateResult, 1000 * 30 * players.length)
   }
