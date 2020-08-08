@@ -14,6 +14,8 @@ const HomePage = () => {
     setPlayers(players => [...players, player])
   }
   const playGame = () => {
+    setGamePlay(false)
+    setResults(false)
     const Game = yatzy()
     players.map(Game.addPlayer)
     Game.randomizePlayersOrder()
@@ -21,11 +23,17 @@ const HomePage = () => {
     setResults(Game.generateScoreCard())
   }
   const playGameSlow = () => {
+    setGamePlay(false)
+    setResults(false)
     const Game = yatzy()
     players.map(Game.addPlayer)
     Game.randomizePlayersOrder()
     Game.play()
     setGamePlay(Game.generateGamePlay())
+    const updateResult = () => {
+      setResults(Game.generateScoreCard())
+    }
+    setTimeout(updateResult, 1000 * 30 * players.length)
   }
   return (
     <>
