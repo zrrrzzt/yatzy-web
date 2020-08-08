@@ -1,8 +1,8 @@
 const Row = props => {
   return (
-      <tr>
-        {Object.values(props).map((item, index) => <td className='border px-4 py-2' key={index}>{item}</td>)}
-      </tr>
+    <tr>
+      {Object.values(props).map((item, index) => <td className='border px-4 py-2' key={index}>{item}</td>)}
+    </tr>
   )
 }
 
