@@ -8,6 +8,10 @@ Plays Yatzy for you... so you don't have to ;-)
 
 See it live [yatzy.allthethings.win](https://yatzy.allthethings.win/)
 
+## Releated
+
+[yatzy](https://github.com/zrrrzzt/yatzy) The module used for gameplay
+
 # License
 
 [MIT](LICENSE)
