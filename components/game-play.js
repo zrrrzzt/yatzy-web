@@ -9,7 +9,7 @@ const GamePlay = props => {
   useEffect(() => {
     if (gameplay) {
       gameplay.map(turns => {
-        return turns.map(player => {
+        return turns.filter(player => !['bonus', 'total score'].includes(player.round)).map(player => {
           const { name, round, rolls } = player
           const updateState = () => {
             setNowPlaying(name)
@@ -19,7 +19,7 @@ const GamePlay = props => {
           return updateState
         })
       }).flat().map((element, index) => {
-        setTimeout(element, 1000 + (1000 * index))
+        setTimeout(element, 2000 * index)
       })
     }
   }, [gameplay])

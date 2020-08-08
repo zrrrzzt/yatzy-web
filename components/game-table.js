@@ -5,9 +5,10 @@ const GameTable = props => {
 
   return (
     <div>
-      <h2>{round}: {name}</h2>
+      <h2 className='text-2xl'>Round: {round}</h2>
+      <h2 className='text-2xl'>Player: {name}</h2>
       <div>
-        {rolls && rolls.map((roll, index) => <Dice dice={roll} key={index} />)}
+        {rolls && <Dice rolls={rolls} />}
       </div>
     </div>
   )
