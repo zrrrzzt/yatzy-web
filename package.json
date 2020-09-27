@@ -31,7 +31,7 @@
     "yatzy": "2.1.1"
   },
   "devDependencies": {
-    "ava": "3.12.1",
+    "ava": "3.13.0",
     "standard": "14.3.4"
   },
   "engines": {
