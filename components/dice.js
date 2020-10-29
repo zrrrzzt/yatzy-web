@@ -9,7 +9,7 @@ const Dice = props => {
       const updateState = () => {
         setDice(roll)
       }
-      setTimeout(updateState, (500 * index))
+      return setTimeout(updateState, (500 * index))
     })
   }, [rolls])
   return (

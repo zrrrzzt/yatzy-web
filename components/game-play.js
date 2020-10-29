@@ -19,7 +19,7 @@ const GamePlay = props => {
           return updateState
         })
       }).flat().map((element, index) => {
-        setTimeout(element, 2000 * index)
+        return setTimeout(element, 2000 * index)
       })
     }
   }, [gameplay])
