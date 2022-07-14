@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/zrrrzzt/yatzy-web#readme",
   "dependencies": {
-    "next": "12.2.0",
+    "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "yatzy": "4.0.0"
