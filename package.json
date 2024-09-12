@@ -32,7 +32,7 @@
     "autoprefixer": "10.4.20",
     "ava": "4.3.3",
     "postcss": "8.4.45",
-    "standard": "17.1.0",
+    "standard": "17.1.1",
     "tailwindcss": "3.4.11"
   },
   "engines": {
