@@ -29,7 +29,7 @@
     "yatzy": "4.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "10.5.2",
+    "autoprefixer": "10.5.4",
     "ava": "4.3.3",
     "postcss": "8.5.19",
     "standard": "17.1.2",
